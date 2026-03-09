@@ -1,0 +1,90 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    @include Prefixer(box-sizing,border-box,webkit moz o);
+
+}
+.container-fluid
+{
+  /* padding: 0; */
+  margin: 0;
+}
+
+a {
+    text-decoration: none;
+    @include Prefixer(transition,all .3s linear ,webkit moz o);
+
+  }
+  
+  *:focus, *, *:active, a:focus, a:active, a {
+    outline: 0 !important;
+  }
+  
+  a:focus, a:hover {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+
+
+  body
+  {
+      // background-color:$bgcolor;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 600;
+      overflow: hidden;
+  }
+  
+  
+
+.Nor-txt
+{
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+%backgroundDetails
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+%flexstyle
+{
+  @include Prefixer(display,flex,webkit moz o);
+  @include Prefixer(flex-direction,column,webkit moz o);
+  @include Prefixer(justify-content,center,webkit moz o);
+}
+%form-control
+{
+  // padding: 20px;
+  border:none ;
+  font-size: 18px;
+  border-radius: 0;
+  &:focus
+  {
+   outline: none;
+   box-shadow: none;
+  }
+}
+
+%bgtransprent
+{
+    background-color:transparent;
+}
+
+%transition
+{
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s  ease-in-out;
+    -o-transition: all 0.2s  ease-in-out;
+    transition: all 0.2s  ease-in-out;
+}
+

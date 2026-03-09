@@ -1,0 +1,60 @@
+.Nor-btn
+{
+    padding: 20px 30px;
+    background: $mainColor;
+    border: none;
+    color: $wcolor;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+
+    @include maxMobile
+    {
+  
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+.N-light
+{
+    background: $mainColor;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+    &:hover
+    {
+        background: $lColor;
+    }
+}
+
+.N-dark
+{
+    background: $lColor;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+
+    &:hover
+    {
+        background: $mainColor;
+    }
+}
+
+
+.sm-btn
+{
+    border-radius: 0;
+    background-color: $lColor;
+    color:  $mainColor;
+    border: 1px solid  $mainColor;
+    text-align: center;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    @include Prefixer( transition,all .2s ease-in-out ,webkit moz o);
+    &:hover{
+
+        background-color:  $mainColor;
+        color: $lColor;
+    }
+}

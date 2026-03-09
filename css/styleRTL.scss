@@ -1,0 +1,275 @@
+
+@import "sass/helpers/variables.scss"; 
+@import "sass/helpers/mixins.scss"; 
+@import "sass/pages/all.scss"; 
+@import "sass/components/slider.scss"; 
+
+
+$float-right:left;
+$float-left:right;
+$text-right:left;
+$text-left:right;
+
+
+$arfont:"Frutiger" , serif;
+$enfont:'Cairo', sans-serif;
+$siteLang:Arabic;
+
+
+@if $siteLang == Arabic
+{
+    // .slider-area .slider-wrap-2 .slick-list .slick-track .item .container .slider-content .product-title
+    // {
+    //     font-size:30px;
+    // }
+}
+
+body
+{
+    font-family: $arfont;
+}
+
+header
+{
+    font-family: $arfont;
+ nav{
+       a.arfont
+        {
+            border-width: 0 1px 0 0;
+            color:  $mainColor !important;
+        }
+        a.enfont
+        {
+            font-family:$enfont ;
+            color: $lColor !important;
+        }
+        .navbar-right 
+        {
+            .dropdown-menu
+            { 
+
+               left: auto;
+               right:-5px;
+        }
+
+    }
+      
+    }
+}
+
+[dir='rtl'] .slick-slide
+{
+    float: left;
+}
+.Nor-banner
+{
+    height: 100vh;
+
+    .slider-wrap 
+    {
+        direction: ltr;
+        .item{
+            .item-bg{
+            
+                left:auto;
+                right: 0 !important;
+               
+
+            }
+        }
+    }
+    
+}
+
+.slider-area
+{
+    .slider-wrap ,.slider-wrap-2
+    {
+        .slick-list
+       { .slick-track
+        { .item
+          { .container
+            {  .slider-content
+                {  .product-title
+                                {
+                                    font-size:30px;
+                                }
+                        }
+                    }
+                }
+        
+            }   
+    
+        }
+
+        .slick-dots
+        {
+            right: 50px;
+            left:auto;
+            @include  maxSmall
+            {
+                right: 20px;
+            }
+        }
+    }
+
+
+}
+
+
+
+.Nor-products
+{
+    .slider-wrap-2
+    {
+        direction: ltr;
+        
+    }
+
+
+}
+
+.Nor-newsletter
+{
+   .L-content
+   {
+    .news-form
+    {
+       .Nor-letter 
+       {
+           button{
+        
+            left: 0;
+            right: auto;
+          
+           }
+
+       }
+   }
+  }
+}
+
+
+.Nor-contatct  
+{
+   .N-Form
+   {
+
+       .form-group
+       {
+          .form-control
+          {
+    
+             &:focus +label 
+             {
+                 right: 3px;
+                 left:auto;
+
+             }
+
+          }
+          label
+          {
+              left:auto;
+              right: 12px;  
+          }
+   
+       }
+
+       .has-data
+       {
+           label{
+            left:auto;
+            right:3px;
+           }
+       }
+
+
+   }
+}
+
+/*footer **/
+footer
+{
+    direction: ltr;
+}
+/*footer**/
+
+
+
+/*inner pages **/
+
+.N-Iproduct
+{
+ 
+    .Nor-title
+    {
+        h2
+        {
+            font-size: 25px;
+        }
+    } 
+   .product-details
+   {
+       font-size: 16px;
+   }
+
+
+
+}
+
+
+
+
+
+
+.N-branchs{
+
+    .cont-info 
+    {
+        .cont-item
+        {
+       
+            box-shadow: -2px 3px 9px #d3d4d4;
+            span{
+              
+                margin-right: 0;
+                margin-left:10px; 
+          
+            }
+            .branch-n
+            {
+
+                padding-left: 0;
+                padding-right: 40px;
+        
+            }
+            .branch-times
+            {
+                .all-time
+                {
+                    .btime{
+                    
+                        margin-left:0;
+                        margin-right: 10px;
+                    }
+
+                }
+            }
+    
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

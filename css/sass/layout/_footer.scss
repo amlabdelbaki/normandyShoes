@@ -1,0 +1,48 @@
+footer
+{
+    background:$lColor;
+    padding: 10px 0;
+    .social-icons
+    {
+        text-align: center;
+        h3
+        {
+         font-size: 30px;
+         color: #fff;
+         font-weight: 700;
+         text-transform: capitalize;
+         margin-bottom: 20px;
+         letter-spacing: 4px;
+        }
+        ul{
+            li{
+                padding: 0;
+                &:first-of-type{
+                   margin-right: 5px;
+                }
+            }
+        }
+    }
+    .copy-rights
+    {
+        margin: 20px 0;
+        text-align: center;
+        color: $wcolor;
+        font-size: 16px;
+        letter-spacing: 1px;
+        @include maxMobile
+        {
+            font-size: 14px;
+            padding: 0 20px;
+        }
+        .corelogo {
+            width: 70px;
+            display: inline-block;
+            margin-left: 4px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+}

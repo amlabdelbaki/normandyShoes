@@ -1,0 +1,204 @@
+.slider-area
+{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    .slider-wrap ,.slider-wrap-2
+    {
+      
+        @extend %WHproperties;
+        
+        .slick-nav
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 999;
+            right: 10px;
+            &:first-of-type
+            {
+                left: 10px;
+                right: auto;
+            }
+
+        }
+        .slick-list
+       {
+          @extend %WHproperties;
+
+            .slick-track
+            {
+                @extend %WHproperties;
+
+                .item
+                {
+                    .item-bg
+                    {
+                        @extend %backgroundDetails;
+                        @extend %WHproperties;
+                    }
+             
+                    text-align: center;
+                    // padding: 30px 0;
+           
+                    .overlay
+                    {
+                        @include Overlay;
+            
+                            background:rgba($blColor, 0.6);
+                  
+                    }
+                    .container
+                    {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        .slider-content{
+                            padding: 0 60px;
+                              .item-img
+                                {
+                                    .object-img
+                                        {
+                                            display: block;
+                                            margin: 10px auto;
+                                            // padding: 20px;
+                       
+                                            &:hover
+                                            {
+                                                // @include Prefixer(box-shadow,0px 3px 9px #faa749a6,webkit moz o);
+                                         
+                                            }
+
+                                        }
+                                
+                      
+                                }
+
+                             .product-title
+                                {
+                                    font-size: 50px;
+                                    font-weight: 700;
+                                    margin: 30px 0 10px;
+                                    text-transform: capitalize;
+                                    position: relative;
+                                    color:$lColor;
+                                    @include  maxSmall{
+                                        font-size: 25px;
+                                    }
+                                &::before
+                                {
+                                    content: "";
+                                    position: absolute;
+                                    width: 100%;
+                                    margin: auto;
+                                    height: 2px;
+                                    background-color:rgba($mainColor,0.37);
+                                    top: 50%;
+                                    left: 0;
+                                    z-index: -1;
+                                
+
+                                }
+                                span{
+                                    background: $bggrey;
+                                    display: inline-block;
+                                    margin: 5px 0;
+                                  
+                                }
+                                
+                                }
+                            .slider-text
+                            {
+                                h1
+                                {
+                                 font-size: 35px;
+                                 color: #fff;
+                                 line-height: 35px;
+                                 @include  maxMobile
+                                 {
+                                     font-size: 25px;
+                                 }
+
+                                }
+                                .pro-text
+                                {
+                                    font-size: 17px;
+                                    color: rgba($lColor,.6);
+                                    margin: 20px auto;
+                                    max-width: 680px;
+
+                                }
+                            }
+
+                        }
+                    }
+                }
+        
+            }   
+    
+        }
+
+        .slick-dots
+        {
+            list-style: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -65px;
+            left: 50px;
+            
+            @include  maxSmall
+            {
+                left: 20px;
+            }
+         
+            
+
+            li {
+
+                width: 10px;
+                height: 10px;
+                margin: 5px 0;
+                background:transparent;
+                border-radius: 50%;
+                border: 2px solid $mainColor;
+                padding: 5px;
+                cursor: pointer;
+                font-size: 0;
+                line-height: 0;
+                &:hover,&.slick-active
+                {
+                    @include Transition(all,.2s,linear );
+                    border: 2px solid $mainColor;
+                    background: $lColor;
+                }
+
+                    button
+                    {
+                    
+                        display: block;
+                        background: transparent;
+                        border: 0;
+                        outline: none;
+                    
+                    }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+%WHproperties
+{
+    height: 100% !important;
+    width: 100%;
+
+}
